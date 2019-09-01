@@ -8,4 +8,4 @@
  */
 
 rootProject.name = "multi-pomodoro"
-include("backend")
+include("backend", "frontend")
