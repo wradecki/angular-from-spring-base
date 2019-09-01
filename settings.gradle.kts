@@ -8,3 +8,4 @@
  */
 
 rootProject.name = "multi-pomodoro"
+include("backend")
