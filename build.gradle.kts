@@ -14,3 +14,19 @@ allprojects {
         mavenCentral()
     }
 }
+
+buildscript {
+    dependencies {
+        classpath("gradle.plugin.com.palantir.gradle.docker:gradle-docker:0.13.0")
+    }
+}
+
+plugins {
+    id("com.palantir.docker") version "0.22.1"
+}
+
+docker {
+    name = "${project.group}/${project.name}"
+    files("backend/build/libs/backend.jar")
+    buildArgs(mapOf("JAR_FILE" to "backend.jar"))
+}
