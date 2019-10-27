@@ -12,7 +12,7 @@ node {
 
 tasks {
   jar {
-    dependsOn ("npm_install")
+    dependsOn ("npm_run_build")
     from("dist/multi-pomodoro" ) {
       into("static")
     }
